@@ -6,7 +6,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>user-service</module>
+		<module>user-servicew</module>
 	</modules>
 
 </project>

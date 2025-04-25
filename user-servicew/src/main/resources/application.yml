@@ -1,21 +1,16 @@
 spring:
   application:
     name: user-service
+
   datasource:
-    url: jdbc:postgresql://order-tracking-system.c0lcyum42pew.us-east-1.rds.amazonaws.com:5432/order-tracking
-    username: postgres
-    password: 12345678
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
       show-sql: true
       properties:
         hibernate.format_sql: true
-  cloud:
-    config:
-      enabled: false
 
 server:
   port: 8081
