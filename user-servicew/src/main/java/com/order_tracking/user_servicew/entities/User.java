@@ -20,7 +20,11 @@ public class User {
 
     @Column(unique = true)
     private String username;
-
     private String password;
+
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "profile_id", referencedColumnName = "id")
+    private UserProfile userProfile;
 
 }
